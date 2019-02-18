@@ -1,0 +1,14 @@
+[Unit]
+Description=razorsocket
+
+[Service]
+Type=simple
+User=razorsocket
+Group=razorsocket
+ExecStart=/usr/bin/perl /opt/rspamd-plugins/razor/razorsocket
+StandardOutput=syslog
+StandardError=syslog
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
